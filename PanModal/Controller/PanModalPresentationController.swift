@@ -125,7 +125,7 @@ open class PanModalPresentationController: UIPresentationController {
      the presented view's properties
      */
     private lazy var panContainerView: PanContainerView = {
-        let frame = containerView?.frame ?? .zero
+        let frame = containerView?.frame ?? presentedViewController.view.frame
         return PanContainerView(presentedView: presentedViewController.view, frame: frame)
     }()
 
